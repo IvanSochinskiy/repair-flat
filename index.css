@@ -1,0 +1,800 @@
+* {
+  font-family: Times, Times New Roman, serif;
+  color: #3f3f3f;
+  box-sizing: border-box;
+}
+body {
+  background: WhiteSmoke;
+    margin:auto;
+    width: 100%;
+    max-width:1000px;
+    min-height: auto;
+}
+.header {
+  /* background-image: url(image/fon_title_main.png); */
+  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  /* background-color: #f7fafc; */
+    /* margin: 5px; */
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    /* display: block; */
+    /* border: 0.5px solid #fc8328; */
+    /* border-radius: 5px; */
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100px;
+}
+.header img {
+  width: 40%;
+  margin: 5px;
+  margin-left: 15px;
+  float: left;
+}
+#tel_header {
+  float: right;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-right: 30px;
+  color: #666666;
+}
+@media screen and (min-width: 160px) and (max-width: 800px)  {
+  #tel_header {
+      visibility: hidden;
+      display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .header img {
+    width: 90%;
+    /* margin-left: -2.5px; */
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .header {
+    width: 100%;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 510px) and (max-width: 960px) {
+  .header {
+    width: 100%;
+    height: 170px;
+  }
+}
+/* НАВИГАТОР mobail */
+@media screen and (min-width:500px)   {
+  .btn-menu {
+      visibility: hidden;
+      display: none;
+  }
+}
+.hidden-menu-ticker {
+  display: none;
+}
+.btn-menu {
+  position: fixed;
+  right: 18px;
+  top: 55px;
+  color: #000000;
+  border: 4px solid #818694;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  padding: 3px;
+  cursor: pointer;
+  transition: left .23s;
+  z-index: 3;
+  width: 35px;
+  height: 35px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.btn-menu span {
+  display: block;
+  height: 2px;
+  background-color: #818694;
+  margin: 5px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+}
+
+.btn-menu span.first {
+  margin-top: 3px;
+}
+.hidden-menu {
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 50px 10px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: #9ACEEB;
+  height: 100%;
+  top: 0;
+  left: -200px;
+  transition: left .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu li {
+  padding:10px 0;
+}
+
+.hidden-menu li a {
+  font-size: 20px;
+  color:#000;
+  padding: 6px 0px;
+  text-decoration: none;
+}
+.hidden-menu-ticker:checked ~ .btn-menu {
+  left: 160px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+
+/* МЕНЮ ВО ВСЮ ШИРИНУ */
+@media screen and (min-width: 80px) and (max-width: 600px) {
+  .navig {
+      visibility: hidden;
+      display: none;
+  }
+}
+.navig ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #e6e6e6, #fff);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.nav__list li {
+  float: right;
+  background-image: linear-gradient(to bottom, #e6e6e6, #fff);
+}
+
+.nav__list li a {
+  display: block;
+  color: #6c6c70;
+  text-align: center;
+  padding: 12px 13px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav__list li a:hover:not(.active) {
+  background-color: #f0f8ff;
+}
+
+.active {
+  background-color: #f0f8ff;
+}
+/* СЛАЙД */
+@media screen and (min-width: 400px) and (max-width: 960px) {
+  .slide .sl {
+    width: 40%;
+	height: 420px;
+    /* margin-left: -5px; */
+  }
+}
+@media screen and (min-width: 160px) and (max-width: 500px) {
+  .slide .sl {
+    width: 100%;
+    height: 500px;
+    /* margin-left: -5px; */
+  }
+}
+@media screen and (min-width: 160px) and (max-width: 960px) {
+  .slide {
+    /* width: 100%; */
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    /* margin-left: -2.5px; */
+  }
+}
+.slide {
+  /* width: 100%; */
+  /* border: 0.5px solid #fc8328; */
+  margin-top: 50px;
+  padding: 10px;
+  float: left;
+  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.slide p {
+  margin-top: 45px;
+}
+.sl {
+	position: relative;
+	display: block;
+  text-align: center;
+	width: 30%;
+	height: 420px;
+	overflow: hidden;
+	border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.sl:before, .sl:after {
+	content: '⥪';
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	z-index: 2;
+	width: 2rem;
+	height: 2rem;
+	background: dodgerblue;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+
+.sl:after {
+	content: '⥭';
+	left: auto;
+	right: 1rem;
+}
+
+/* I haven't found a way for IE and Edge to let me style inputs that way */
+input {
+	appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transform: translateX(100%);
+	transition: transform ease-in-out 400ms;
+	z-index: 1;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:after {
+	content: attr(title);
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+	padding: .5rem;
+	font-size: 1rem;
+	border-radius: 5px;
+}
+
+input:not(checked):before {
+	content: '';
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	top: 50%;
+	left: calc(-100% + 1rem);
+}
+
+input:checked:before {
+	display: none;
+	left: 1rem;
+}
+
+input:checked {
+	transform: translateX(0);
+	pointer-event: none;
+	z-index: 0;
+	/* box-shadow: -5px 10px 20px -15px rgba(0,0,0,1); */
+}
+
+input:checked + input:before {
+	left: -3rem;
+}
+
+input:checked + input ~ input:before {
+	display: none;
+}
+/* АНИМАЦИЯ */
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .main h1 {
+    font-size: 1.20rem;
+    /* text-align:center; */
+    /* margin-left: 10px; */
+    /* margin-left: 12px; */
+}
+}
+@media screen and (min-width: 320px) and (max-width: 960px) {
+  .main {
+    /* text-align: center; */
+}
+}
+.main_main {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  float:left;
+  border: 0.1px solid #fc8328;
+  background-image: linear-gradient(to bottom, #e6e6e6, #fff);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+.main{
+  /* width: 100%;   */
+  /* height:auto; */
+  display:block;
+  /* align-items:center; */
+  justify-content:center;
+  text-align:center;
+}
+.main h1{
+  /* text-align:center; */
+  text-transform: uppercase;
+  color: #fc8328; 
+  font-size: 1.40rem;
+  /* margin-right: 30px; */
+}
+
+.roller{
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #019501;
+}
+
+
+#spare-time{
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 1rem;
+  margin-top: 0;
+  color: #757575;
+  
+}
+
+.roller #rolltext {
+  color: #019501;
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -4rem;    
+  }
+  50%{
+    top: -8rem;
+  }
+  72.5%{
+    top: -12.25rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1{
+  text-align:center;
+  text-transform: uppercase;
+  color: #F1FAEE; 
+  font-size: 1.85rem;
+}
+  
+  .roller{
+  height: 2.6rem; 
+  line-height: 2.125rem;  
+  }
+  
+  #spare-time {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .roller #rolltext {  
+  animation: slide-mob 5s infinite;  
+}
+  
+  @keyframes slide-mob {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -2.125rem;    
+  }
+  50%{
+    top: -4.25rem;
+  }
+  72.5%{
+    top: -6.375rem;
+  }
+}
+}
+.services {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  float: left;
+  margin-top: 50px;
+  padding: 15px;
+}
+/* КНОПКА ВОТСАП */
+.whatsapp-button {
+  position: fixed;
+  right: 8px;
+  bottom: 60px;
+  transform: translate(-50%, -50%);
+  background: #25D366; /*цвет кнопки*/
+  border-radius: 50%;
+  width: 55px; /*ширина кнопки*/
+  height: 55px; /*высота кнопки*/
+  color: #fff;
+  text-align: center;
+  line-height: 53px; /*центровка иконки в кнопке*/
+  font-size: 35px; /*размер иконки*/
+  z-index: 9999;
+}
+.whatsapp-button a {
+  color: #fff;
+}
+.whatsapp-button:before,
+.whatsapp-button:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border: 1px solid #25D366; /*цвет анимированных волн от кнопки*/
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: animate 7.5s linear infinite;
+  opacity: 0;
+  backface-visibility: hidden; 
+}
+
+.whatsapp-button:after{
+  animation-delay: .5s;
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+/* КНОПКА ВОТСАП */
+.whatsapp-button {
+  position: fixed;
+  right: 8px;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  background: #25D366; /*цвет кнопки*/
+  border-radius: 50%;
+  width: 55px; /*ширина кнопки*/
+  height: 55px; /*высота кнопки*/
+  color: #fff;
+  text-align: center;
+  line-height: 53px; /*центровка иконки в кнопке*/
+  font-size: 35px; /*размер иконки*/
+  z-index: 9999;
+}
+.whatsapp-button a {
+  color: #fff;
+}
+.whatsapp-button:before,
+.whatsapp-button:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border: 1px solid #25D366; /*цвет анимированных волн от кнопки*/
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+  backface-visibility: hidden; 
+}
+
+.whatsapp-button:after{
+  animation-delay: .5s;
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+/* КНОПКА ЗВОНИТЬ */
+@media screen and (min-width: 960px) {
+  .phone-button {
+  visibility: hidden;
+  display: none;
+  }
+}
+.phone-button {
+  position: fixed;
+  right: 13px;
+  bottom: 90px;
+  transform: translate(-50%, -50%);
+  background: #5bc0de;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+  font-size: 30px;
+  z-index: 9999;
+}
+.phone-button a {
+  color: #fff;
+}
+.phone-button:before,
+.phone-button:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  border: 50%;
+  border: 1px solid #5bc0de;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+  backface-visibility: hidden; 
+}
+.phone-button:after{
+  animation-delay: .5s;
+}
+.phone-button i {
+      color:#fff;
+      transition:.3s;
+      animation: 1200ms ease 0s normal none 1 running shake;
+      animation-iteration-count: infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  50%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+@keyframes shake {
+0% {
+  transform: rotateZ(0deg);
+      -ms-transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+}
+10% {
+  transform: rotateZ(-30deg);
+      -ms-transform: rotateZ(-30deg);
+      -webkit-transform: rotateZ(-30deg);
+}
+20% {
+  transform: rotateZ(15deg);
+      -ms-transform: rotateZ(15deg);
+      -webkit-transform: rotateZ(15deg);
+}
+30% {
+  transform: rotateZ(-10deg);
+      -ms-transform: rotateZ(-10deg);
+      -webkit-transform: rotateZ(-10deg);
+}
+40% {
+  transform: rotateZ(7.5deg);
+      -ms-transform: rotateZ(7.5deg);
+      -webkit-transform: rotateZ(7.5deg);
+}
+50% {
+  transform: rotateZ(-6deg);
+      -ms-transform: rotateZ(-6deg);
+      -webkit-transform: rotateZ(-6deg);
+}
+60% {
+  transform: rotateZ(5deg);
+      -ms-transform: rotateZ(5deg);
+      -webkit-transform: rotateZ(5deg);
+}
+70% {
+  transform: rotateZ(-4.28571deg);
+      -ms-transform: rotateZ(-4.28571deg);
+      -webkit-transform: rotateZ(-4.28571deg);
+}
+80% {
+  transform: rotateZ(3.75deg);
+      -ms-transform: rotateZ(3.75deg);
+      -webkit-transform: rotateZ(3.75deg);
+}
+90% {
+  transform: rotateZ(-3.33333deg);
+      -ms-transform: rotateZ(-3.33333deg);
+      -webkit-transform: rotateZ(-3.33333deg);
+}
+100% {
+  transform: rotateZ(0deg);
+      -ms-transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+}
+}
+@media (max-width : 800px) {  
+  .phone-button {   
+      bottom: 0; /*отступ кнопки снизу от экрана*/
+      left: 70px; /*отступ кнопки слева от экрана(right - справа)*/
+    }
+  }
+#footer p {
+  text-align: center;
+  color: #000000;
+}
+#footer {
+  float:left;
+  width: 100%;
+  text-align: center;
+}
+.beauty-rotate {
+  width: 100%;
+  margin-top: 50px;
+  list-style-type: none;
+  float: left;
+  background-image: linear-gradient(to bottom, #e6e6e6, #fff);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.beauty-rotate ul {
+  margin-left: -25px;
+  list-style-type: none;
+  display: flex;
+}
+.logos {
+  width: 90%;
+}
+/* АДРЕС */
+.adr {
+  width: 100%;
+  text-align: center;
+  float: left;
+}
+.left-side {
+  /* width: 98%; */
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  padding: 5px;
+  background-image: linear-gradient(to bottom, #fff, #b8b8b8);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  opacity: 0.7; 
+  /* float:left; */
+}
+.left-side h2 {
+  font-size: 28px;
+  color: #327dc8;
+}
+.title_forma {
+  color: #327dc8;
+}
+.address_details .topic, .phone_details .topic, .email_details .topic {
+  color: #2c3136;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 7px; /* отступ снизу 7px */
+}
+/* .topic-text {
+   font-size: 20px;
+   font-family: FontAwesome;
+  margin-bottom: 10px;
+} */
+ .text-one,
+.text-two {
+  font-size: 18px;
+  color: #4d4d4d;
+  /* font-weight: bold; */
+
+}
+.text-one a,
+.text-two a {
+  font-size: 18px;
+  color: #4d4d4d;
+  text-decoration: none;
+}
+.left-side, #montage_text {
+  list-style-type: none;
+}
+.phone_details, .email_details {
+  /* margin-right: 30px; */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.topic {
+  color: #4d4d4d;
+  font-weight: bold;
+}
+.hradr {
+  width: 50%;
+}
+/* @media screen and (min-width: 320px) and (max-width: 960px) {
+  .title_forma {
+  visibility: hidden;
+  display: none;
+  }
+} */
+.email_details {
+  margin-bottom: 15px;
+}
+
